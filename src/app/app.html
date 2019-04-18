@@ -1,1 +1,25 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="mainContent">
+  <ion-content id="side-menu21" style="background-color:#EBECEB;">
+    <ion-card id="menu-card22">
+      <ion-list>
+        <ion-item color="none" id="menu-list-item31">
+          <ion-avatar item-left>
+            <img />
+          </ion-avatar>
+          <h2>
+            Pedro Perez
+          </h2>
+        </ion-item>
+        <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
+          <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+        </div>
+        <ion-item color="assertive" menuClose="" on-click="goToLogin()" id="menu-list-item32">
+          <ion-icon name="close" item-left></ion-icon>
+          Cerrar Sesion
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mainContent [root]="rootPage"></ion-nav>
