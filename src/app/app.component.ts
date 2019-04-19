@@ -10,28 +10,28 @@ import { LoginPage } from '../pages/login/login';
 
 
 @Component({
-  templateUrl: 'app.html'
+    templateUrl: 'app.html'
 })
 export class MyApp {
-  @ViewChild(Nav) navCtrl: Nav;
-    rootPage:any = LoginPage;
+    @ViewChild(Nav) navCtrl: Nav;
+    rootPage: any = LoginPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
-    });
-  }
-  goToLogin(params){
-    if (!params) params = {};
-    this.navCtrl.setRoot(LoginPage);
-  }goToPedidosUltimaHora(params){
-    if (!params) params = {};
-    this.navCtrl.setRoot(PedidosUltimaHoraPage);
-  }goToDetallePedido(params){
-    if (!params) params = {};
-    this.navCtrl.setRoot(DetallePedidoPage);
-  }
+    constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+        platform.ready().then(() => {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            statusBar.styleDefault();
+            splashScreen.hide();
+        });
+    }
+    goToLogin(params) {
+        if (!params) params = {};
+        this.navCtrl.setRoot(LoginPage);
+    } goToPedidosUltimaHora(params) {
+        if (!params) params = {};
+        this.navCtrl.setRoot(PedidosUltimaHoraPage);
+    } goToDetallePedido(params) {
+        if (!params) params = {};
+        this.navCtrl.setRoot(DetallePedidoPage);
+    }
 }

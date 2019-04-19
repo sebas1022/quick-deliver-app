@@ -1,74 +1,118 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      Crear Pedido
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>
+			Crear Pedido
+		</ion-title>
+	</ion-navbar>
 </ion-header>
 <ion-content padding id="page4">
-  <form id="crearPedido-form2" (ngSubmit)="savePedido();">
-    <ion-item id="crearPedido-input9">
-      <ion-label stacked>
-        Barrio
-      </ion-label>
-      <ion-input type="text" placeholder="" name="barrio"></ion-input>
-    </ion-item>
-    <div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer4"></div>
-    <ion-item id="crearPedido-input7">
-      <ion-label stacked>
-        Dirección
-      </ion-label>
-      <ion-input type="text" placeholder="" name="direccion"></ion-input>
-    </ion-item>
-    <div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer5"></div>
-    <ion-item id="crearPedido-input11">
-      <ion-label stacked>
-        Descripción
-      </ion-label>
-      <ion-input type="text" placeholder="" name="descripcion"></ion-input>
-    </ion-item>
-    <div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer7"></div>
-    <ion-item id="crearPedido-input8">
-      <ion-label>
-        Entrega
-      </ion-label>
-      <ion-input type="text" placeholder="tiempo de entrega"></ion-input>
-    </ion-item>
-    <div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer6"></div>
-    <ion-item id="crearPedido-input10">
-      <ion-label stacked>
-        Telefono Contacto
-      </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
-    </ion-item>
-    <div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer8"></div>
-    <h4 id="crearPedido-heading3" style="color:#000000;">
-      Forma de pago
-    </h4>
-    <ion-item name="casa" id="crearPedido-checkbox1">
-      <ion-label>
-        Pago en casa
-      </ion-label>
-      <ion-checkbox></ion-checkbox>
-    </ion-item>
-    <ion-item id="crearPedido-checkbox2">
-      <ion-label>
-        Tarjeta de credito
-      </ion-label>
-      <ion-checkbox></ion-checkbox>
-    </ion-item>
-    <ion-item id="crearPedido-checkbox3">
-      <ion-label>
-        Tarjeta de debito
-      </ion-label>
-      <ion-checkbox></ion-checkbox>
-    </ion-item>
-    <div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer9"></div>
-    <button id="crearPedido-button3" ion-button color="balanced" block on-click="goToDetallePedido()">
-      Enviar
-    </button>
-  </form>
+	<form id="crearPedido-form2" (ngSubmit)="savePedido();" [formGroup]="formulario">
+		<ion-item id="crearPedido-input9">
+			<ion-label stacked
+			[class.error]="!formulario.controls.barrio.valid && formulario.controls.barrio.dirty">
+				Barrio
+			</ion-label>
+			<ion-input
+				type="text"
+				placeholder=""
+				[(ngModel)]="pedido.barrio"
+				name="barrio"
+				formControlName="barrio"
+				[class.error1]="!formulario.controls.barrio.valid && formulario.controls.barrio.dirty">
+			</ion-input>
+		</ion-item>
+		<div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer4"></div>
+		<ion-item id="crearPedido-input7">
+			<ion-label
+				stacked
+				[class.error]="!formulario.controls.direccion.valid && formulario.controls.direccion.dirty">
+				Dirección
+			</ion-label>
+			<ion-input
+				type="text"
+				placeholder=""
+				[(ngModel)]="pedido.direccion"
+				formControlName="direccion"
+				name="direccion"
+				[class.error1]="!formulario.controls.direccion.valid && formulario.controls.direccion.dirty">
+			</ion-input>
+		</ion-item>
+		<div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer6"></div>
+		<ion-item id="crearPedido-input10">
+			<ion-label stacked 
+				[class.error]="!formulario.controls.telefonoContacto.valid && formulario.controls.telefonoContacto.dirty">
+				Telefono Contacto
+			</ion-label>
+			<ion-input
+				type="text"
+				placeholder=""
+				[(ngModel)]="pedido.telefonoContacto"
+				formControlName="telefonoContacto"
+				[class.error1]="!formulario.controls.telefonoContacto.valid && formulario.controls.telefonoContacto.dirty"
+				name="telefonoContacto">
+			</ion-input>
+		</ion-item>
+		<div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer6"></div>
+		<ion-item id="crearPedido-input10">
+			<ion-label stacked
+			[class.error]="!formulario.controls.valor.valid && formulario.controls.valor.dirty">
+				Valor
+			</ion-label>
+			<ion-input
+				type="number"
+				placeholder=""
+				[(ngModel)]="pedido.valor"
+				formControlName="valor"
+				[class.error1]="!formulario.controls.valor.valid && formulario.controls.valor.dirty"
+				name="valor">
+			</ion-input>
+		</ion-item>
+		<div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer5"></div>
+		<ion-item id="crearPedido-input11">
+			<ion-label 
+			[class.error]="!formulario.controls.descripcion.valid && formulario.controls.descripcion.dirty"			
+			stacked>
+				Descripción
+			</ion-label>
+			<ion-input
+				type="text"
+				placeholder=""
+				[(ngModel)]="pedido.descripcion"
+				formControlName="descripcion"
+				[class.error1]="!formulario.controls.descripcion.valid && formulario.controls.descripcion.dirty"
+				name="descripcion">
+			</ion-input>
+		</ion-item>
+		<div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer8"></div>
+		<h4 id="crearPedido-heading3" style="color:#000000;">
+			Forma de pago
+		</h4>
+		<ion-list radio-group radio-group="radio-group" [(ngModel)]="pedido.pago" formControlName="pago">
+			<ion-item  id="crearPedido-checkbox1">
+				<ion-label>
+					Efectivo
+				</ion-label>
+				<ion-radio value="Efectivo"></ion-radio>
+			</ion-item>
+			<ion-item id="crearPedido-checkbox2">
+				<ion-label>
+					Tarjeta de credito
+				</ion-label>
+				<ion-radio value="Tarjeta de credito"></ion-radio>
+			</ion-item>
+			<ion-item id="crearPedido-checkbox3">
+				<ion-label>
+					Tarjeta de debito
+				</ion-label>
+				<ion-radio value="Tarjeta de debito"></ion-radio>
+			</ion-item>
+		</ion-list>
+		<div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer9"></div>
+		<button [disabled]="formulario.status !=='VALID'" id="crearPedido-button3" ion-button color="balanced" block type="submit">
+			Enviar
+		</button>
+	</form>
 </ion-content>
