@@ -13,35 +13,37 @@ import { DetallePedidoPage } from '../pages/detalle-pedido/detalle-pedido';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PedidosProvider } from '../providers/pedidos/pedidos';
+import { UsuarioProvider } from '../providers/usuario/usuario';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    LoginPage,
-    PedidosUltimaHoraPage,
-    CrearPedidoPage,
-    TabsPage,
-    DetallePedidoPage
-  ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    IonicModule.forRoot(MyApp)
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    LoginPage,
-    PedidosUltimaHoraPage,
-    CrearPedidoPage,
-    TabsPage,
-    DetallePedidoPage
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    PedidosProvider
-  ]
+    declarations: [
+        MyApp,
+        LoginPage,
+        PedidosUltimaHoraPage,
+        CrearPedidoPage,
+        TabsPage,
+        DetallePedidoPage
+    ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        IonicModule.forRoot(MyApp)
+    ],
+    bootstrap: [IonicApp],
+    entryComponents: [
+        MyApp,
+        LoginPage,
+        PedidosUltimaHoraPage,
+        CrearPedidoPage,
+        TabsPage,
+        DetallePedidoPage
+    ],
+    providers: [
+        StatusBar,
+        SplashScreen,
+        { provide: ErrorHandler, useClass: IonicErrorHandler },
+        PedidosProvider,
+        UsuarioProvider
+    ]
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+import { CONSTANST_PROVIDER } from '../providers.constanst';
 /*
   Generated class for the PedidosProvider provider.
 
@@ -10,7 +11,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class PedidosProvider {
 
-    apiUrl = 'http://localhost:3000';
+    apiUrl = CONSTANST_PROVIDER.API_URL;
 
     constructor(public http: HttpClient) { }
 
