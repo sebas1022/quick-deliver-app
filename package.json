@@ -8,7 +8,8 @@
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "lint": "ionic-app-scripts lint",
+    "lab": "ionic serve --lab"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.1",
+    "@ionic/lab": "1.0.24",
     "typescript": "~2.6.2"
   },
   "description": "An Ionic project"

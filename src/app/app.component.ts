@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { PedidosUltimaHoraPage } from '../pages/pedidos-ultima-hora/pedidos-ultima-hora';
 import { DetallePedidoPage } from '../pages/detalle-pedido/detalle-pedido';
-
 import { LoginPage } from '../pages/login/login';
 
 

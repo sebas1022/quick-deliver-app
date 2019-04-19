@@ -4,36 +4,92 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      Detalle Pedido
+      Detalle Pedido #{{pedido?.noPedido}}
     </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page6">
-  <h4 id="detallePedido-heading2" style="color:#000000;font-weight:600;">
-    #12345678
-  </h4>
-  <img src="assets/img/RlS2KFrxSeOZZ9XgRO10_pedido.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
   <ion-card id="detallePedido-card21">
     <ion-list>
+      <ion-item color="balanced" id="detallePedido-list-item37">
+        <ion-icon name="checkbox" item-left></ion-icon>
+        Estado
+        <ion-note item-right>{{pedido?.estado}}</ion-note>
+      </ion-item>
+      <div class="spacer" style="width:100%;height:18px;" id="detallePedido-spacer11"></div>
+      <ion-item color="none" id="detallePedido-list-item39">
+        <ion-icon name="map" item-left></ion-icon>
+        Barrio
+        <ion-note item-right>{{pedido?.barrio}}</ion-note>
+      </ion-item>
+      <div class="spacer" style="width:100%;height:18px;" id="detallePedido-spacer12"></div>
+      <ion-item color="none" id="detallePedido-list-item39">
+        <ion-icon name="pin" item-left></ion-icon>
+        Dirección
+        <ion-note item-right>{{pedido?.direccion}}</ion-note>
+      </ion-item>
+      <div class="spacer" style="width:100%;height:18px;" id="detallePedido-spacer12"></div>
+      <ion-item color="none" id="detallePedido-list-item39">
+        <ion-icon name="call" item-left></ion-icon>
+        Telefono Contacto
+        <ion-note item-right>{{pedido?.telefonoContacto}}</ion-note>
+      </ion-item>
+      <div class="spacer" style="width:100%;height:18px;" id="detallePedido-spacer12"></div>
+      <ion-item color="none" id="detallePedido-list-item35">
+        <ion-icon name="clock" item-left></ion-icon>
+        Hora
+        <ion-note item-right>{{pedido?.fechaRecepcion}}</ion-note>
+      </ion-item>
+      <div class="spacer" style="width:100%;height:18px;" id="detallePedido-spacer12"></div>
+      <ion-item color="none" id="detallePedido-list-item35">
+        <ion-icon name="clock" item-left></ion-icon>
+        Tiempo Estimado
+        <ion-note item-right>{{pedido?.tiempoEstimado}}</ion-note>
+      </ion-item>
+      <div class="spacer" style="width:100%;height:18px;" id="detallePedido-spacer13"></div>
+      <ion-item color="none" id="detallePedido-list-item38">
+        Resumen
+      </ion-item>
       <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
-        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+        {{pedido?.descripcion}}
       </div>
+      <div class="spacer" style="width:100%;height:18px;" id="detallePedido-spacer14"></div>
+      <div id="detallePedido-container2"></div>
+      <div class="spacer" style="width:100%;height:18px;" id="detallePedido-spacer16"></div>
+      <ion-item color="none" id="detallePedido-list-item40">
+        <ion-icon name="usd" item-left></ion-icon>
+        Valor
+        <ion-note item-right>{{pedido?.valor}}</ion-note>
+      </ion-item>
+      <div id="detallePedido-container1">
+        <div class="spacer" style="width:100%;height:18px;" id="detallePedido-spacer15"></div>
+      </div>
+      <ion-item color="none" id="detallePedido-list-item41">
+        <ion-icon name="card" item-left></ion-icon>
+        Pago
+        <ion-note item-right>{{pedido?.pago}}</ion-note>
+      </ion-item>
     </ion-list>
   </ion-card>
-  <h3 id="detallePedido-heading1" style="color:#000000;">
+  <h2 id="detallePedido-heading1" style="color:#415568;text-align: center;">
     Domiciliario
-  </h3>
-  <ion-list id="detallePedido-list7">
-    <ion-item color="none" id="detallePedido-list-item28">
-      <ion-avatar item-left>
-        <img />
-      </ion-avatar>
-      <h2>
-        Juan Perez
-      </h2>
-    </ion-item>
-  </ion-list>
-  <button id="detallePedido-button2" ion-button color="calm" block href="tel:3208056800">
+  </h2>
+  <ion-card>
+    
+    <ion-list id="detallePedido-list7">
+      <ion-item color="none" id="detallePedido-list-item28">
+        <ion-avatar item-left>
+          <img />
+        </ion-avatar>
+        <h2>
+          Juan Perez
+        </h2>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <button id="detallePedido-button2" ion-button color="balanced" block href="tel:3208056800">
+    <ion-icon name="call"></ion-icon>
     Llamar
   </button>
 </ion-content>
+
