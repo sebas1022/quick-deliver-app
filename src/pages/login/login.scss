@@ -1,11 +1,25 @@
 page-login {
-    .error {
-        color: rgb(223, 62, 62);
-        font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+
+    .cont-logo-app {
+        margin: 10% auto 20%;
+        width: 60%;
     }
 
-    .error1 {
-        color: rgb(75, 75, 75);
-        border-bottom: 1px solid #ff0000;
+    .text-intro-login {
+        font-size: 1.2rem;
+        width: 80%;
     }
+
+    #login-form1 {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+}
+
+.item-inner {
+    border-bottom: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 12px;
 }

@@ -30,12 +30,9 @@ export class LoginPage {
 			});
 	}
 	goToPedidosUltimaHora(data) {
-		data = data[0];
-		if(data._id && data.activo) {
+
 			this.navCtrl.push(PedidosUltimaHoraPage);
-		} else {
-			this.presentAlert();
-		}
+
 	}
 
 	makeLogin() {
@@ -51,7 +48,7 @@ export class LoginPage {
 			message: 'Usuario y/o Contraseña Errados',
 			buttons: ['OK']
 		});
-	
+
 		await alert.present();
 	  }
 }

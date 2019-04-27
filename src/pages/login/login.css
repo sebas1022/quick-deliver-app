@@ -1,0 +1,24 @@
+page-login {
+  font-family: 'Open Sans', sans-serif;
+}
+
+page-login .cont-logo-app {
+  margin: 10% auto 20%;
+  width: 60%;
+}
+
+page-login .text-intro-login {
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+page-login #login-form1 {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.item-inner {
+  border-bottom: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 12px;
+}
