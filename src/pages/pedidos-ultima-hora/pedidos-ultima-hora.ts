@@ -14,24 +14,24 @@ export class PedidosUltimaHoraPage {
   pedidos: any;
 
   constructor(public navCtrl: NavController, public restProvider: PedidosProvider) {
-      this.getPedidos();
-  }
-  
-  goToDetallePedido(params){
-      if (!params) params = {};
-
-      this.navCtrl.push(DetallePedidoPage, {idPedido: params});
+    this.getPedidos();
   }
 
-  goToCrearPedido(params){
+  goToDetallePedido(params) {
+    if (!params) params = {};
+
+    this.navCtrl.push(DetallePedidoPage, { idPedido: params });
+  }
+
+  goToCrearPedido(params) {
     if (!params) params = {};
     this.navCtrl.push(CrearPedidoPage);
   }
 
   getPedidos() {
     this.restProvider.getPedidos()
-    .then(data => {
-      this.pedidos = data;
-    });
+      .then(data => {
+        this.pedidos = data;
+      });
   }
 }

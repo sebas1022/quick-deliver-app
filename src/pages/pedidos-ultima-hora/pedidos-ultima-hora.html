@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
@@ -22,3 +23,28 @@
 </ion-content>
 
 
+=======
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Pedidos Ultima Hora
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page3">
+  <ion-list id="pedidosUltimaHora-list6" inset>
+    <ion-item *ngFor="let pedido of pedidos;" color="energized" on-click="goToDetallePedido(pedido._id)"
+      id="pedidosUltimaHora-list-item17">
+      <ion-icon name="send" item-left></ion-icon>
+      Pedido #{{pedido.noPedido}} ({{pedido.estado[0]}})
+    </ion-item>
+  </ion-list>
+  <button id="detallePedido-button2" ion-button color="balanced" block on-click="goToCrearPedido()"
+    style="position: absolute;bottom: 0;left: 0;">
+    Crear Pedido
+  </button>
+</ion-content>
+>>>>>>> dc3606931591e5f7b3cf3f751fd0b99a9e678e26

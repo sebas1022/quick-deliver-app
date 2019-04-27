@@ -15,9 +15,9 @@ export class DetallePedidoPage {
 
   getPedido(idPedido) {
     this.restProvider.getPedido(idPedido)
-    .then(data => {
-      this.pedido = data;
-    })
+      .then(data => {
+        this.pedido = data;
+      })
   }
-  
+
 }

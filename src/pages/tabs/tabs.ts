@@ -14,10 +14,10 @@ export class TabsPage {
   tab2Root: any = PedidosUltimaHoraPage;
   constructor(public navCtrl: NavController) {
   }
-  goToCrearPedido(params){
+  goToCrearPedido(params) {
     if (!params) params = {};
     this.navCtrl.push(CrearPedidoPage);
-  }goToDetallePedido(params){
+  } goToDetallePedido(params) {
     if (!params) params = {};
     this.navCtrl.push(DetallePedidoPage);
   }

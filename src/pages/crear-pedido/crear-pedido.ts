@@ -14,7 +14,7 @@ export class CrearPedidoPage {
 		barrio: '',
 		direccion: '',
 		telefonoContacto: '',
-		valor: '',				
+		valor: '',
 		descripcion: '',
 		pago: '',
 		noPedido: Math.floor(Math.random() * 90000) + 10000
@@ -37,18 +37,18 @@ export class CrearPedidoPage {
 			]))
 		});
 	}
-	
-	goToDetallePedido(params){
+
+	goToDetallePedido(params) {
 		if (!params) params = {};
-  
-		this.navCtrl.push(DetallePedidoPage, {idPedido: params._id});
+
+		this.navCtrl.push(DetallePedidoPage, { idPedido: params._id });
 	}
 
 	savePedido() {
 		this.restProvider.addPedido(this.pedido).then((result) => {
 			this.goToDetallePedido(result)
-		  }, (err) => {
+		}, (err) => {
 			console.log(err);
-		  });
+		});
 	}
 }
