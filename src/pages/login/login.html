@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <ion-content padding id="page2">
     <div class="spacer" style="width:300px;height:44px;" id="login-spacer2"></div>
 
@@ -40,47 +39,3 @@
     </form>
 
 </ion-content>
-=======
-<ion-content padding id="page2">
-    <div class="spacer" style="width:300px;height:64px;" id="login-spacer2"></div>
-    <div id="login-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
-        <p style="color:#415568;font-size:24px;">
-            BIENVENIDO
-        </p>
-    </div>
-    <img src="assets/img/gvea7xq5QamMVAcCRJXc_bike-18_icon-icons.com_66445.png"
-        style="display:block;width:50%;height:auto;margin-left:auto;margin-right:auto;" />
-    <div class="spacer" style="width:300px;height:36px;" id="login-spacer10"></div>
-    <form id="login-form1" (ngSubmit)="makeLogin();" [formGroup]="formulario">
-        <ion-item id="login-input3">
-            <ion-label>
-                Usuario
-            </ion-label>
-            <ion-input type="text" placeholder="Usuario" name="usuario" [(ngModel)]="login.usuario"
-                formControlName="usuario"
-                [class.error1]="!formulario.controls.usuario.valid && formulario.controls.usuario.dirty">
-            </ion-input>
-        </ion-item>
-        <div class="spacer" style="width:300px;height:26px;" id="login-spacer1"></div>
-        <ion-item id="login-input4">
-            <ion-label>
-                Contraseña
-            </ion-label>
-            <ion-input type="password" placeholder="contraseña" name="password" [(ngModel)]="login.password"
-                formControlName="password"
-                [class.error1]="!formulario.controls.password.valid && formulario.controls.password.dirty">
-            </ion-input>
-        </ion-item>
-        <div class="spacer" style="width:300px;height:20px;" id="login-spacer3"></div>
-        <div class="error" *ngIf="invialidUser">
-            Usuario o Contraseña errados
-        </div>
-        <div class="spacer" style="width:300px;height:20px;" id="login-spacer3"></div>
-        <button [disabled]="formulario.status !=='VALID'" id="login-button1" ion-button color="balanced" block
-            style="border-radius:10px 10px 10px 10px;">
-            Ingresar
-        </button>
-    </form>
-
-</ion-content>
->>>>>>> dc3606931591e5f7b3cf3f751fd0b99a9e678e26
