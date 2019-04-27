@@ -75,7 +75,12 @@
     <h2 id="detallePedido-heading1" style="color:#415568;text-align: center;">
         Domiciliario
     </h2>
-    <ion-card>
+    <ion-card *ngIf="!pedido?.domiciliario._id" >
+            <h2>
+                   No Asignado
+                </h2>
+    </ion-card>
+    <ion-card *ngIf="pedido?.domiciliario._id" >
 
         <ion-list id="detallePedido-list7">
             <ion-item color="none" id="detallePedido-list-item28">
@@ -83,12 +88,12 @@
                     <img />
                 </ion-avatar>
                 <h2>
-                    Juan Perez
+                    {{pedido?.domiciliario.nombre}}
                 </h2>
             </ion-item>
         </ion-list>
     </ion-card>
-    <button id="detallePedido-button2" ion-button color="balanced" block href="tel:3208056800">
+    <button id="detallePedido-button2" ion-button color="balanced" block href="tel:pedido?.domiciliario.telefono">
         <ion-icon name="call"></ion-icon>
         Llamar
     </button>

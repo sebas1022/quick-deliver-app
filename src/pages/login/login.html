@@ -13,12 +13,8 @@
             <ion-label>
                 Usuario
             </ion-label>
-            <ion-input
-                type="text"
-                placeholder="Usuario"
-                name="usuario"
-                [(ngModel)]="login.usuario"
-				formControlName="usuario"
+            <ion-input type="text" placeholder="Usuario" name="usuario" [(ngModel)]="login.usuario"
+                formControlName="usuario"
                 [class.error1]="!formulario.controls.usuario.valid && formulario.controls.usuario.dirty">
             </ion-input>
         </ion-item>
@@ -27,18 +23,14 @@
             <ion-label>
                 Contraseña
             </ion-label>
-            <ion-input 
-                type="password"
-                placeholder="contraseña"
-                name="password"
-                [(ngModel)]="login.password"
+            <ion-input type="password" placeholder="contraseña" name="password" [(ngModel)]="login.password"
                 formControlName="password"
                 [class.error1]="!formulario.controls.password.valid && formulario.controls.password.dirty">
             </ion-input>
         </ion-item>
         <div class="spacer" style="width:300px;height:20px;" id="login-spacer3"></div>
         <div class="error" *ngIf="invialidUser">
-            Usuario o Contraseña errados    
+            Usuario o Contraseña errados
         </div>
         <div class="spacer" style="width:300px;height:20px;" id="login-spacer3"></div>
         <button [disabled]="formulario.status !=='VALID'" id="login-button1" ion-button color="balanced" block
@@ -46,5 +38,5 @@
             Ingresar
         </button>
     </form>
-    
+
 </ion-content>

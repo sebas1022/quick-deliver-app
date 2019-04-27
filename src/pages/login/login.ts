@@ -24,14 +24,14 @@ export class LoginPage {
 		public navCtrl: NavController,
 		public userProvider: UsuarioProvider,
 		public alertController: AlertController) {
-			this.formulario = new FormGroup({
-				usuario: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(50)]),
-				password: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(150)]),
-			});
+		this.formulario = new FormGroup({
+			usuario: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z ]*'), Validators.minLength(4), Validators.maxLength(50)]),
+			password: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(150)]),
+		});
 	}
 	goToPedidosUltimaHora(data) {
 		data = data[0];
-		if(data._id && data.activo) {
+		if (data._id && data.activo) {
 			this.navCtrl.push(PedidosUltimaHoraPage);
 		} else {
 			this.presentAlert();
@@ -51,7 +51,7 @@ export class LoginPage {
 			message: 'Usuario y/o Contraseña Errados',
 			buttons: ['OK']
 		});
-	
+
 		await alert.present();
-	  }
+	}
 }

@@ -11,45 +11,31 @@
 <ion-content padding id="page4">
 	<form id="crearPedido-form2" (ngSubmit)="savePedido();" [formGroup]="formulario">
 		<ion-item id="crearPedido-input9">
-			<ion-label stacked
-			[class.error]="!formulario.controls.barrio.valid && formulario.controls.barrio.dirty">
+			<ion-label stacked [class.error]="!formulario.controls.barrio.valid && formulario.controls.barrio.dirty">
 				Barrio
 			</ion-label>
-			<ion-input
-				type="text"
-				placeholder=""
-				[(ngModel)]="pedido.barrio"
-				name="barrio"
-				formControlName="barrio"
+			<ion-input type="text" placeholder="" [(ngModel)]="pedido.barrio" name="barrio" formControlName="barrio"
 				[class.error1]="!formulario.controls.barrio.valid && formulario.controls.barrio.dirty">
 			</ion-input>
 		</ion-item>
 		<div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer4"></div>
 		<ion-item id="crearPedido-input7">
-			<ion-label
-				stacked
+			<ion-label stacked
 				[class.error]="!formulario.controls.direccion.valid && formulario.controls.direccion.dirty">
 				Dirección
 			</ion-label>
-			<ion-input
-				type="text"
-				placeholder=""
-				[(ngModel)]="pedido.direccion"
-				formControlName="direccion"
+			<ion-input type="text" placeholder="" [(ngModel)]="pedido.direccion" formControlName="direccion"
 				name="direccion"
 				[class.error1]="!formulario.controls.direccion.valid && formulario.controls.direccion.dirty">
 			</ion-input>
 		</ion-item>
 		<div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer6"></div>
 		<ion-item id="crearPedido-input10">
-			<ion-label stacked 
+			<ion-label stacked
 				[class.error]="!formulario.controls.telefonoContacto.valid && formulario.controls.telefonoContacto.dirty">
 				Telefono Contacto
 			</ion-label>
-			<ion-input
-				type="text"
-				placeholder=""
-				[(ngModel)]="pedido.telefonoContacto"
+			<ion-input type="text" placeholder="" [(ngModel)]="pedido.telefonoContacto"
 				formControlName="telefonoContacto"
 				[class.error1]="!formulario.controls.telefonoContacto.valid && formulario.controls.telefonoContacto.dirty"
 				name="telefonoContacto">
@@ -57,31 +43,20 @@
 		</ion-item>
 		<div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer6"></div>
 		<ion-item id="crearPedido-input10">
-			<ion-label stacked
-			[class.error]="!formulario.controls.valor.valid && formulario.controls.valor.dirty">
+			<ion-label stacked [class.error]="!formulario.controls.valor.valid && formulario.controls.valor.dirty">
 				Valor
 			</ion-label>
-			<ion-input
-				type="number"
-				placeholder=""
-				[(ngModel)]="pedido.valor"
-				formControlName="valor"
-				[class.error1]="!formulario.controls.valor.valid && formulario.controls.valor.dirty"
-				name="valor">
+			<ion-input type="number" placeholder="" [(ngModel)]="pedido.valor" formControlName="valor"
+				[class.error1]="!formulario.controls.valor.valid && formulario.controls.valor.dirty" name="valor">
 			</ion-input>
 		</ion-item>
 		<div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer5"></div>
 		<ion-item id="crearPedido-input11">
-			<ion-label 
-			[class.error]="!formulario.controls.descripcion.valid && formulario.controls.descripcion.dirty"			
-			stacked>
+			<ion-label [class.error]="!formulario.controls.descripcion.valid && formulario.controls.descripcion.dirty"
+				stacked>
 				Descripción
 			</ion-label>
-			<ion-input
-				type="text"
-				placeholder=""
-				[(ngModel)]="pedido.descripcion"
-				formControlName="descripcion"
+			<ion-input type="text" placeholder="" [(ngModel)]="pedido.descripcion" formControlName="descripcion"
 				[class.error1]="!formulario.controls.descripcion.valid && formulario.controls.descripcion.dirty"
 				name="descripcion">
 			</ion-input>
@@ -91,7 +66,7 @@
 			Forma de pago
 		</h4>
 		<ion-list radio-group radio-group="radio-group" [(ngModel)]="pedido.pago" formControlName="pago">
-			<ion-item  id="crearPedido-checkbox1">
+			<ion-item id="crearPedido-checkbox1">
 				<ion-label>
 					Efectivo
 				</ion-label>
@@ -111,7 +86,8 @@
 			</ion-item>
 		</ion-list>
 		<div class="spacer" style="width:300px;height:25px;" id="crearPedido-spacer9"></div>
-		<button [disabled]="formulario.status !=='VALID'" id="crearPedido-button3" ion-button color="balanced" block type="submit">
+		<button [disabled]="formulario.status !=='VALID'" id="crearPedido-button3" ion-button color="balanced" block
+			type="submit">
 			Enviar
 		</button>
 	</form>
